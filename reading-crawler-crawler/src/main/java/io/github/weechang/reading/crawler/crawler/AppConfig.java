@@ -9,7 +9,7 @@ package io.github.weechang.reading.crawler.crawler;
  */
 public class AppConfig {
 
-    // 小说源
+    // 小说源 默认笔趣阁
     public static final Integer sourceType = SourceEnums.BIQUGE.getKey();
     // 退出键
     public static final String exit = "q";

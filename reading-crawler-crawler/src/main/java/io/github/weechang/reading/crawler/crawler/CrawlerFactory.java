@@ -8,9 +8,16 @@ package io.github.weechang.reading.crawler.crawler;
 public class CrawlerFactory {
 
     public static AbstractCrawler build(Integer key){
+        //默认笔趣阁
         AbstractCrawler abstractCrawler = new BiQuGeCrawler();
         switch (key){
-            case 1: // 笔趣阁
+            //笔趣阁
+            case 1:
+                abstractCrawler = new BiQuGeCrawler();
+            //17K小说网
+            case 2:
+                abstractCrawler = new ShiQiKCrawler();
+            default:
                 abstractCrawler = new BiQuGeCrawler();
         }
         return abstractCrawler;

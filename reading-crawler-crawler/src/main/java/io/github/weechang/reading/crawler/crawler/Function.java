@@ -16,14 +16,19 @@ public class Function {
     // 爬虫类
     private AbstractCrawler crawler;
 
-    public Function(String firstUrl){
-        crawler =  CrawlerFactory.build(config.sourceType);
+    /**
+     * 入口
+     * @param firstUrl 第一页的链接
+     * @param sourceType 数据源
+     */
+    public Function(String firstUrl, Integer sourceType){
+        this.crawler =  CrawlerFactory.build(sourceType);
         startView(firstUrl);
     }
 
     // 页面浏览
     private void startView(String pageUrl){
-        String content = crawler.getPage(pageUrl);
+        String content = this.crawler.getPage(pageUrl);
         System.out.println(content);
         this.inputListener();
     }

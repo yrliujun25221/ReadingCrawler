@@ -7,7 +7,14 @@ package io.github.weechang.reading.crawler.crawler;
  */
 public enum SourceEnums {
 
-    BIQUGE(1, "笔趣阁", "https://www.biqugexsw.com");
+    /**
+     * 笔趣阁
+     */
+    BIQUGE(1, "笔趣阁", "https://www.biqugexsw.com"),
+    /**
+     * 17K小说网
+     */
+    SHIQIK(2, "17K", "https://www.17k.com");
 
     private Integer key;
     private String name;
